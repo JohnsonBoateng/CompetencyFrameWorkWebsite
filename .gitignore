@@ -3,3 +3,7 @@
 ################################################################################
 
 /CompetencyFrameworkWebsite/CompetencyFrameworkWebsite/obj/Debug
+/CompetencyFrameworkWebsite/packages
+/CompetencyFrameworkWebsite/CompetencyFrameworkWebsite/bin
+/.vs
+/CompetencyFrameworkWebsite/.vs
