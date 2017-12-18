@@ -12,7 +12,7 @@ namespace CompetencyFrameworkWebsite.Controllers
         {
             ApiAccess apiAccess= new ApiAccess();
             var test= apiAccess.GetAllTechnologies();
-            return View();
+            return View(); 
         }
 
         public ActionResult About()

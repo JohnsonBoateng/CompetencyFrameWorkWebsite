@@ -19,10 +19,7 @@ namespace CompetencyFrameworkWebsite
             _httpClient = new HttpClient {BaseAddress = new Uri(ConfigurationManager.AppSettings["ApiBaseAddress"]) };
         }
 
-        public List<string> GetAllTechnologies()
-        {       
-            return CallApi("api/technology");
-        }
+        public List<string> GetAllTechnologies() => CallApi("api/technology");
 
         private List<string> CallApi(string address)
         {
