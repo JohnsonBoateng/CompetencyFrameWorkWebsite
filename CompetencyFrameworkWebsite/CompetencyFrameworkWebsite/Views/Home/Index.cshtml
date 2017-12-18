@@ -2,50 +2,18 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<form method="post" action="">
+    <div style="padding:10px">
+        <select>
+            @{
+                foreach (var technology in @ViewBag.test)
+                {
+                    <option value="technology">@technology</option>
+                }
+                
+            }
+        </select>
+        <input type="submit" class="btn btn-default" value="Select">
 
-
-
-<div class="form-group">
-  <label class="col-md-4 control-label">Select Technologies:</label>
-    <select name ="Select Technology" >
-        <option value="Location" disabled="disabled" selected="selected">Select…</option>
-        <option value="UI Engineer">UI Engineer</option>
-        <option value=".NET Engineer">.NET Engineer</option>
-        <option value="Java"> Java</option>
-        <option value="Scotland">Scotland</option>
-        <option value="RPG">RPG</option>
-        <option value="Docs Engineer">Docs Engineer</option>
-    </select>
-</div>
-
-
-
-
-
-
-<div class="form-group">
-<label class="col-md-4 control-label">Select JobTitle:</label>
-    <select name ="JobTitle" >
-        <option value="Location" disabled="disabled" selected="selected">Select…</option>
-        <option value="Junior UI Engineer">Junior UI Engineer</option>
-        <option value="UI Engineer">UI Engineer</option>
-        <option value="Senior UI Engineer">Senior UI Engineer</option>
-        <option value="Junior Web Application Developer">Junior Web Application Developer</option>
-        <option value="Web Application Developer">Web Application Developer</option>
-        <option value="Senior Web Application Developer">Senior Web Application Developer</option>
-        <option value="Junior Java Developer">Junior Java Developer</option>
-        <option value="Java Developer">Java Developer</option>
-        <option value="Senior Java Developer">Senior Java Developer</option>
-        <option value="Junior Analyst Programmer">Junior Analyst Programmer</option>
-        <option value="Analyst Programmer"> Analyst Programmer</option>
-        <option value="Senior  Analyst Programmer">Senior  Analyst Programmer</option>
-        <option value="Junior Docs Developer">Junior Docs Developer</option>
-        <option value="Docs Developer">Docs Developer</option>
-        <option value="Senior Docs Developer">Senior Docs Developer</option>
-    </select>
-</div>
+    </div>
+</form>

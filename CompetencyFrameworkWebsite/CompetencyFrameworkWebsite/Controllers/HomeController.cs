@@ -10,9 +10,12 @@ namespace CompetencyFrameworkWebsite.Controllers
     {
         public ActionResult Index()
         {
+
+          
             ApiAccess apiAccess= new ApiAccess();
-            var test= apiAccess.GetAllTechnologies();
-            return View(); 
+            ViewBag.test = apiAccess.GetAllTechnologies();
+
+            return View();
         }
 
         public ActionResult About()
