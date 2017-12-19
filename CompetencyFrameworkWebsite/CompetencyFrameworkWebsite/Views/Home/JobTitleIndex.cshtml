@@ -1,14 +1,15 @@
 ﻿@model CompetencyFrameworkWebsite.Models.JobTitleModel
+@using CompetencyFrameworkWebsite.Controllers
+@using Microsoft.Ajax.Utilities
+
+
 @{
     ViewBag.Title = "Job Title";
 }
 
-<form method="post" action="">
-    <div>
-        <select>
-        @{
-           
-         }
-        </select>
+
+    <div style="padding: 10px">
+        @Html.DropDownList("JobTitles", new SelectList(Model.JobTitles))
+        <input type="submit" class="btn btn-default" value="Select">
+
     </div>
-</form>
