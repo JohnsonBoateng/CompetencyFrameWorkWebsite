@@ -20,6 +20,8 @@ namespace CompetencyFrameworkWebsite
         }
 
         public List<string> GetAllTechnologies() => CallApi("api/technology");
+        public List<string> GetAllJobTitle(string technologyName) => CallApi("api/jobtitle/");
+
 
         private List<string> CallApi(string address)
         {
@@ -27,5 +29,8 @@ namespace CompetencyFrameworkWebsite
             var result = response.Content.ReadAsStringAsync().Result;
             return JsonConvert.DeserializeObject<List<string>>(result);
         }
+
     }
+
+
 }

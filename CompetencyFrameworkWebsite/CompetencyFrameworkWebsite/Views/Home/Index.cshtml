@@ -1,19 +1,43 @@
-﻿@{
+﻿@using Microsoft.Ajax.Utilities
+@{
     ViewBag.Title = "Home Page";
 }
 
+
 <form method="post" action="">
-    <div style="padding:10px">
+    <div style="padding: 10px">
         <select>
             @{
                 foreach (var technology in @ViewBag.test)
                 {
-                    <option value="technology">@technology</option>
+                    <option id="technologies" value="technology">@technology</option>
                 }
-                
             }
         </select>
-        <input type="submit" class="btn btn-default" value="Select">
+        <input type="submit" class="btn btn-default" onclick="myFunction()" value="Select">       
+    </div >
+</form >
 
-    </div>
-</form>
+<p id="demo"></p>
+
+@{
+    <script>
+        function myFunction() {
+            var x = document.getElementById("technologies").value;
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script>
+
+
+   }      
+@{
+    if (IsPost)
+    {
+
+
+    }
+
+
+
+
+}
