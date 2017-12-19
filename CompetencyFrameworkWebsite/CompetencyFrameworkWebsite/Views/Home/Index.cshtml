@@ -6,14 +6,14 @@
 
 <form method="post" action="">
     <div style="padding: 10px">
-        <select>
-            @{
-                foreach (var technology in @ViewBag.test)
-                {
-                    <option id="technologies" value="technology">@technology</option>
-                }
-            }
-        </select>
+       
+            @{  foreach (var technology in @ViewBag.test)
+                { 
+                    <p>@technology</p>
+                } 
+            }             
+            
+      
         <input type="submit" class="btn btn-default" onclick="myFunction()" value="Select">       
     </div >
 </form >
