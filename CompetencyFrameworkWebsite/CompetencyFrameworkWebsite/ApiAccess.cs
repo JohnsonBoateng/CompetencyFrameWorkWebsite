@@ -21,7 +21,8 @@ namespace CompetencyFrameworkWebsite
 
         public List<string> GetAllTechnologies() => CallApi("api/technology");
         public List<string> GetAllJobTitle(string technologyName) => CallApi("api/jobtitle/"+ technologyName);
-
+        public List<string> GetAllResults(string technologyName, string jobTitleName) => CallApi ("api/competency?technologyName="+technologyName+"&jobTitle="+jobTitleName);
+       
 
         private List<string> CallApi(string address)
         {
