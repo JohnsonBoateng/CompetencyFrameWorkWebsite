@@ -1,0 +1,13 @@
+﻿@model CompetencyFrameworkWebsite.Models.ResultsModel
+@using CompetencyFrameworkWebsite.Controllers
+@using Microsoft.Ajax.Utilities
+
+@{
+
+    ViewBag.Title = "Results";
+}
+
+<div style="padding: 10px">
+    @Html.TextArea("Results", new SelectList(Model.Results))
+
+</div>

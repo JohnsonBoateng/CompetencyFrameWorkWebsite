@@ -34,7 +34,19 @@ namespace CompetencyFrameworkWebsite.Controllers
          
         }
 
+        [HttpPost]
+        public ActionResult ResultsIndex (string technologies, string jobTitles)
+        { 
+           ApiAccess apiAccess = new ApiAccess();
+           var model = new ResultsModel();
+           model.Results = new List<string>();
+            model.Results = apiAccess.GetAllResults(technologies,jobTitles);
+            return View("ResultsIndex", model);
+           //return RedirectToAction("ResultsIndex");
 
+        }
+        
+        //
 
 
         //public ActionResult About()
