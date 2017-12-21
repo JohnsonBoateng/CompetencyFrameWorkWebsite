@@ -153,6 +153,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Competency.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobTitleController.cs" />
     <Compile Include="Controllers\ResultsController.cs" />
@@ -202,12 +203,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\JobTitleIndex.cshtml" />
-    <Content Include="Views\Home\ResultsIndex.cshtml" />
+    <Content Include="Views\Results\ResultsIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\jobTitle\" />
-    <Folder Include="Views\Results\" />
     <Folder Include="Views\Technology\" />
   </ItemGroup>
   <ItemGroup>

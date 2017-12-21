@@ -8,7 +8,7 @@ namespace CompetencyFrameworkWebsite.Models
     public class ResultsModel
     {
 
-      public List<string> Results;
+      public List<Competency> Results;
 
     }
 

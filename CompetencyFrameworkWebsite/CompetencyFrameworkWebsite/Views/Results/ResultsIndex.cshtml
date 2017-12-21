@@ -7,7 +7,24 @@
     ViewBag.Title = "Results";
 }
 
-<div style="padding: 10px">
-    @Html.TextArea("Results", new SelectList(Model.Results))
 
+
+
+
+<div style="padding: 10px">
+    
+  
+
+    <textarea>
+    @{ 
+        //var returnAll = new List<Competency>(Model.Results);
+
+
+        foreach (var result in ViewBag.Results)
+        {
+           @result
+            }
+
+    }
+</textarea>
 </div>

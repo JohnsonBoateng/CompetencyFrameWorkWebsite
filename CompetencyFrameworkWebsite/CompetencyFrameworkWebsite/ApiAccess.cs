@@ -19,16 +19,16 @@ namespace CompetencyFrameworkWebsite
             _httpClient = new HttpClient {BaseAddress = new Uri(ConfigurationManager.AppSettings["ApiBaseAddress"]) };
         }
 
-        public List<string> GetAllTechnologies() => CallApi("api/technology");
-        public List<string> GetAllJobTitle(string technologyName) => CallApi("api/jobtitle/"+ technologyName);
-        public List<string> GetAllResults(string technologyName, string jobTitleName) => CallApi ("api/competency?technologyName="+technologyName+"&jobTitle="+jobTitleName);
+        public List<string> GetAllTechnologies() => CallApi<string>("api/technology");
+        public List<string> GetAllJobTitle(string technologyName) => CallApi<string>("api/jobtitle/"+ technologyName);
+        public List<Competency> GetAllResults(string technologyName, string jobTitleName) => CallApi<Competency>("api/competency?technologyName="+technologyName+"&jobTitle="+jobTitleName);
        
 
-        private List<string> CallApi(string address)
+        private List<T> CallApi<T>(string address)
         {
             var response = _httpClient.GetAsync(address).Result;
             var result = response.Content.ReadAsStringAsync().Result;
-            return JsonConvert.DeserializeObject<List<string>>(result);
+            return JsonConvert.DeserializeObject<List<T>>(result);
         }
 
     }

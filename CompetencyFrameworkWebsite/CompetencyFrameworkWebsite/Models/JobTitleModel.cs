@@ -9,5 +9,6 @@ namespace CompetencyFrameworkWebsite.Models
     {
 
         public List<string> JobTitles;
+        public string Technology;
     }
 }

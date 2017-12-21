@@ -29,8 +29,10 @@ namespace CompetencyFrameworkWebsite.Controllers
             ApiAccess apiAccess = new ApiAccess();
             var model = new JobTitleModel();
             model.JobTitles = new List<string>();
+            model.Technology = technologies;
             model.JobTitles = apiAccess.GetAllJobTitle(technologies);
-            return View("JobTitleIndex", model);
+          
+            return View("JobTitleIndex",model);
          
         }
 
@@ -39,11 +41,9 @@ namespace CompetencyFrameworkWebsite.Controllers
         { 
            ApiAccess apiAccess = new ApiAccess();
            var model = new ResultsModel();
-           model.Results = new List<string>();
-            model.Results = apiAccess.GetAllResults(technologies,jobTitles);
-            return View("ResultsIndex", model);
-           //return RedirectToAction("ResultsIndex");
-
+           model.Results = new List<Competency>();
+           model.Results = apiAccess.GetAllResults(technologies,jobTitles);
+           return View("ResultsIndex", model);
         }
         
         //
