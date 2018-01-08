@@ -43,6 +43,7 @@ namespace CompetencyFrameworkWebsite.Controllers
            var model = new ResultsModel();
            model.Results = new List<Competency>();
            model.Results = apiAccess.GetAllResults(technologies,jobTitles);
+           
            return View("ResultsIndex", model);
         }
         

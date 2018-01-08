@@ -12,19 +12,32 @@
 
 
 <div style="padding: 10px">
-    
-  
 
-    <textarea>
-    @{ 
-        //var returnAll = new List<Competency>(Model.Results);
+    <form>
+
+        
+       @{
 
 
-        foreach (var result in ViewBag.Results)
-        {
-           @result
-            }
 
-    }
-</textarea>
+           foreach (var result in Model.Results)
+           {
+
+           
+                   @result.AreaName;<br />
+           
+                   @result.CompetencyName;<br />
+             
+                   @result.RatingName; <br />
+
+                   @result.TopicName;<br />
+
+               
+           }
+
+       }
+
+
+
+    </form>  
 </div>

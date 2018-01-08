@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-//using CompetencyFrameworkWebsite.Models;
+using CompetencyFrameworkWebsite.Models;
 
 namespace CompetencyFrameworkWebsite.Controllers
 {
@@ -14,9 +14,15 @@ namespace CompetencyFrameworkWebsite.Controllers
         {
            
             ApiAccess apiAccess = new ApiAccess();
-            ViewBag.results = apiAccess.GetAllResults(technology, jobTitles);
-           
-            return View();
+            var model = new ResultsModel();
+           model.Results = new List<Competency>();
+           model.Results = apiAccess.GetAllResults(technology, jobTitles);
+
+
+            //ViewBag.results = apiAccess.GetAllResults(technology, jobTitles);
+
+
+            return View(model);
 
         }
     }
