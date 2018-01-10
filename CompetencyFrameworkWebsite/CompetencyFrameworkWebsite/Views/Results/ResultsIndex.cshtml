@@ -7,37 +7,42 @@
     ViewBag.Title = "Results";
 }
 
-
-
-
-
 <div style="padding: 10px">
 
-    <form>
+    @{
 
-        
-       @{
+        foreach (var topic in Model.TopicsName)
+        {
+             <div>
+            <table style="border-collapse:collapse;width:100%">
+                <tr>
+                    <th style="border:solid thin;"></th>
+                    <th style="border:solid thin; align-content:center">@topic</th>
+                    <th style="border:solid thin"></th>
+                </tr>
 
+                @foreach (var result in Model.Results.Where(x => x.TopicName == @topic))
+                {
+                    <tr style="border:solid thin">
 
+                        <td style="border:solid thin; width:100px">@result.AreaName</td>
+                        <td style="border:solid thin">@result.CompetencyName</td>
+                        <td style="border:solid thin; width:100px">@result.RatingName</td>
+                    </tr>
 
-           foreach (var result in Model.Results)
-           {
-
-           
-                   @result.AreaName;<br />
-           
-                   @result.CompetencyName;<br />
-             
-                   @result.RatingName; <br />
-
-                   @result.TopicName;<br />
-
-               
-           }
-
-       }
-
+                }
 
 
-    </form>  
+            </table>
+            <br />
+                 </div>
+        }
+
+    }
+
 </div>
+
+
+
+
+
