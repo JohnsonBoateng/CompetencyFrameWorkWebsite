@@ -154,12 +154,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Competency.cs" />
+    <Compile Include="Controllers\CreateAUserController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobTitleController.cs" />
     <Compile Include="Controllers\ResultsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CreateAUserModel.cs" />
     <Compile Include="Models\ResultsModel.cs" />
     <Compile Include="Models\JobTitleModel.cs" />
     <Compile Include="Models\TechnologyModel.cs" />
@@ -204,6 +206,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\JobTitleIndex.cshtml" />
     <Content Include="Views\Results\ResultsIndex.cshtml" />
+    <Content Include="Views\CreateAUser\CreateAUserIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
