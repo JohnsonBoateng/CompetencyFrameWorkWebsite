@@ -5,11 +5,9 @@ using System.Web;
 
 namespace CompetencyFrameworkWebsite.Models
 {
-    public class ResultsModel
+    public class TopicsModel
     {
-
-      public List<Competency> Results;
-      public List<string> TopicsName;
+        public List<string> TopicsName;
 
     }
 

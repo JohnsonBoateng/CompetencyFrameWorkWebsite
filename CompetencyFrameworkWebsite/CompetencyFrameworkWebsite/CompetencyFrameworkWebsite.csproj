@@ -162,10 +162,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CreateAUserModel.cs" />
+    <Compile Include="Models\TopicsModel.cs" />
     <Compile Include="Models\ResultsModel.cs" />
     <Compile Include="Models\JobTitleModel.cs" />
     <Compile Include="Models\TechnologyModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\TopicsName.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />

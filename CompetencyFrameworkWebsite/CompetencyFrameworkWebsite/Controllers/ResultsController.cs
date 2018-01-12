@@ -15,11 +15,11 @@ namespace CompetencyFrameworkWebsite.Controllers
            
             ApiAccess apiAccess = new ApiAccess();
             var model = new ResultsModel();
-           model.Results = new List<Competency>();
-           model.Results = apiAccess.GetAllResults(technology, jobTitles);
-
-
-            //ViewBag.results = apiAccess.GetAllResults(technology, jobTitles);
+           
+            model.Results = new List<Competency>();
+            model.TopicsName = new List<string>();
+            model.Results = apiAccess.GetAllResults(technology, jobTitles);
+            model.TopicsName = apiAccess.GetAllTopics();
 
 
             return View(model);
