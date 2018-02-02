@@ -1,0 +1,20 @@
+﻿@model CompetencyFrameworkWebsite.Models.ResultsModel
+@using CompetencyFrameworkWebsite.Controllers
+@using Microsoft.Ajax.Utilities
+
+
+
+@{
+
+    ViewBag.Title = "Save information";
+}
+
+@using (Html.BeginForm("ViewSelection", "Results", FormMethod.Post))
+{
+<h2>Your selection has been saved</h2>
+<input type="submit" class="btn btn-default" value="View selection">
+}
+
+
+
+

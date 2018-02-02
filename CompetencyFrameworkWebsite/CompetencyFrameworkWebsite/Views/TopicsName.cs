@@ -7,6 +7,7 @@ namespace CompetencyFrameworkWebsite
 {
     public class Topics
     {
+        
         public string TopicName { get; set; }
     }
 }

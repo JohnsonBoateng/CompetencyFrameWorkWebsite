@@ -23,6 +23,9 @@ namespace CompetencyFrameworkWebsite
         public List<string> GetAllJobTitle(string technologyName) => CallApi<string>("api/jobtitle/"+ technologyName);
         public List<Competency> GetAllResults(string technologyName, string jobTitleName) => CallApi<Competency>("api/competency?technologyName="+technologyName+"&jobTitle="+jobTitleName);
         public List <string> GetAllTopics () => CallApi<string>("api/topics");
+        public List<UserRatingData> GetAllUserRating() => CallApi<UserRatingData>("api/userrating");
+        public List<UserData> GetAllUser() => CallApi<UserData>("api/user");
+        public List<GetUserRating> GetAllUserInput(int UserID) => CallApi<GetUserRating>("api/getuserrating?UserID="+UserID);
 
         private List<T> CallApi<T>(string address)
         {

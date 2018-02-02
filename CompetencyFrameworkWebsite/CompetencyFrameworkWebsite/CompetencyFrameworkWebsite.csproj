@@ -153,6 +153,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="dataAcess.cs" />
+    <Compile Include="addRating.cs" />
+    <Compile Include="Models\UserDataModel.cs" />
+    <Compile Include="GetUserRating.cs" />
+    <Compile Include="Models\GetUserRatingModel.cs" />
+    <Compile Include="UserData.cs" />
+    <Compile Include="UserRatingData.cs" />
     <Compile Include="Competency.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobTitleController.cs" />
@@ -160,6 +167,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\UserRatingModel.cs" />
     <Compile Include="Models\TopicsModel.cs" />
     <Compile Include="Models\ResultsModel.cs" />
     <Compile Include="Models\JobTitleModel.cs" />
@@ -190,7 +198,9 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -206,9 +216,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\JobTitleIndex.cshtml" />
     <Content Include="Views\Results\ResultsIndex.cshtml" />
+    <Content Include="Views\Results\SaveUserData.cshtml" />
+    <Content Include="Views\Results\ViewSelection.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AddRating\" />
     <Folder Include="Views\jobTitle\" />
     <Folder Include="Views\Technology\" />
   </ItemGroup>

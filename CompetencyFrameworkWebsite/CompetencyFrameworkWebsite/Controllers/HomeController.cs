@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using CompetencyFrameworkWebsite.Models;
+using System.Configuration;
+using System.Data.SqlClient;
+
 
 namespace CompetencyFrameworkWebsite.Controllers
 {
@@ -36,16 +39,17 @@ namespace CompetencyFrameworkWebsite.Controllers
          
         }
 
-        [HttpPost]
-        public ActionResult ResultsIndex (string technologies, string jobTitles)
-        { 
-           ApiAccess apiAccess = new ApiAccess();
-           var model = new ResultsModel();
-           model.Results = new List<Competency>();
-           model.Results = apiAccess.GetAllResults(technologies,jobTitles);
+        //[HttpPost]
+        //public ActionResult ResultsIndex (string technologies, string jobTitles)
+        //{ 
+        //   ApiAccess apiAccess = new ApiAccess();
+        //   var model = new ResultsModel();
+        //   model.Results = new List<Competency>();
+        //   model.RatingID = new List<UserRatingData>();
+        //   model.Results = apiAccess.GetAllResults(technologies,jobTitles);
            
-           return View("ResultsIndex", model);
-        }
+        //   return View("ResultsIndex", model);
+        //}
         
         //
 
