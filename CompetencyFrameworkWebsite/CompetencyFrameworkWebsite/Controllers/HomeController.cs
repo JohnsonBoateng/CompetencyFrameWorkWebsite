@@ -15,8 +15,6 @@ namespace CompetencyFrameworkWebsite.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-
-          
             ApiAccess apiAccess= new ApiAccess();
             var model = new TechnologyModel();
             model.Technologies = new List<string>();
@@ -28,7 +26,6 @@ namespace CompetencyFrameworkWebsite.Controllers
         [HttpPost]
         public ActionResult Index(string technologies)
         {
-         
             ApiAccess apiAccess = new ApiAccess();
             var model = new JobTitleModel();
             model.JobTitles = new List<string>();
