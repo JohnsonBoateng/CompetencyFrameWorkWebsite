@@ -5,9 +5,12 @@ using System.Web;
 
 namespace CompetencyFrameworkWebsite.Models
 {
-    public class JobTitleModel
+    public class JobModel
     {
-        public List<string> JobTitles;
-        public string Technology;
+
+        public List<Job> Jobs;
+        public string Technologies;
+        public List<CreateUser> CreateUsers;
+
     }
 }
