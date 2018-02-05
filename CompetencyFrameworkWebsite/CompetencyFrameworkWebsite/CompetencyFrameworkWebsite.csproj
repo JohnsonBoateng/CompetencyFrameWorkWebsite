@@ -148,26 +148,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addUser.cs" />
     <Compile Include="ApiAccess.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="dataAcess.cs" />
-    <Compile Include="addRating.cs" />
-    <Compile Include="Models\UserDataModel.cs" />
-    <Compile Include="GetUserRating.cs" />
-    <Compile Include="Models\GetUserRatingModel.cs" />
-    <Compile Include="UserData.cs" />
-    <Compile Include="UserRatingData.cs" />
     <Compile Include="Competency.cs" />
-    <Compile Include="Controllers\CreateAUserController.cs" />
+    <Compile Include="Controllers\JobController.cs" />
+    <Compile Include="Controllers\UserTechnologyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobTitleController.cs" />
     <Compile Include="Controllers\ResultsController.cs" />
+    <Compile Include="CreateUser.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Job.cs" />
+    <Compile Include="Models\JobModel.cs" />
+    <Compile Include="Models\UserTechnologyModel.cs" />
     <Compile Include="Models\TopicsModel.cs" />
     <Compile Include="Models\ResultsModel.cs" />
     <Compile Include="Models\JobTitleModel.cs" />
@@ -216,10 +215,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\JobTitleIndex.cshtml" />
     <Content Include="Views\Results\ResultsIndex.cshtml" />
+    <Content Include="Views\UserTechnology\CreateAUserIndex.cshtml" />
+    <Content Include="Views\UserTechnology\UserTechnologyIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\AddRating\" />
     <Folder Include="Views\jobTitle\" />
     <Folder Include="Views\Technology\" />
   </ItemGroup>

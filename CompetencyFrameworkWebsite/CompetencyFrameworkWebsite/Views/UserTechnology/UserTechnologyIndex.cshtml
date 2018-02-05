@@ -1,0 +1,22 @@
+﻿@model CompetencyFrameworkWebsite.Models.TechnologyModel
+
+@using CompetencyFrameworkWebsite.Controllers
+@using Microsoft.Ajax.Utilities
+@{
+    ViewBag.Title = "UserTechnologyIndex";
+}
+
+
+@using (Html.BeginForm("UserTechnologyIndex", "UserTechnology"))
+{
+    <form>
+        <div class="form-group" style="padding: 10px">
+            <h4>Select Technology</h4>
+            <br/>
+            <p>@Html.DropDownList("Technologies", new SelectList(Model.Technologies))
+            <input type="submit" class="btn btn-default" value="Select"> </p>
+        </div>
+    </form>
+
+}
+
