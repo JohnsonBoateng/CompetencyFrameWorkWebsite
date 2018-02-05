@@ -16,12 +16,12 @@ namespace CompetencyFrameworkWebsite.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult CreateAUserIndex(UserModel model)
-        {
-            ApiAccess apiAccess = new ApiAccess();
-            return View();
-        }
+        //[HttpPost]
+        //public ActionResult CreateAUserIndex(UserModel model)
+        //{
+        //    ApiAccess apiAccess = new ApiAccess();
+        //    return View();
+        //}
 
 
 

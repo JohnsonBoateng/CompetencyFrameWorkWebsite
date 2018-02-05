@@ -12,10 +12,12 @@
 
 @using (Html.BeginForm("SaveUserData", "Results",FormMethod.Post))
 {
+
+    <body>
     <div style="padding: 10px">
 
         @{
-           
+
             foreach (var topic in Model.TopicsName)
             {
             
@@ -43,12 +45,12 @@
                                
                                     @if (result.RatingTypeID.Equals(1))
                                     {
-                                        <select name="userRating"  id="userRatingColour" onclick="changeColour()" class="colourAbove">
+                                        <select name="userRating"  id="userRatingColour" onchange="changeColour()">
                                          @foreach (var UserRating in Model.RatingID.GetRange(0, 6))
                                          {
 
 
-                                         <option value=@UserRating.RatingID class="colour">@UserRating.RatingName</option>
+                                         <option value=@UserRating.RatingID >@UserRating.RatingName</option>
                                            
 
                                          }
@@ -83,68 +85,154 @@
 
 
                 <script type="text/javascript">
+               // <script>
 
-                    document.getElementById("userRatingColour").selectedIndex = function ()
-                    { changeColour() };
-                    function changeColour(){
+                    function changeColour() {
 
-                        // $(document).on("click", "userRatingColour", function () {
-                        //   alert("my life")
-                        // });
-                        //var y = document.getElementById('ratingID').value;
-                        var x = document.getElementById('userRatingColour').selectedIndex;
+                        $('#userRatingColour').find('option').each(function (index, element)
+                        {
+
+                            alert("option" + element.value + "index" + index);
+
+
+
+                        
+                        //var select = document.getElementById("userRatingColour");
+                        //for (var i = 0; i < select.length; i++) {
+                            //var option = select.options[i];
+                        //$("#userRatingColour option").each(function () {
+
+                        //    //if ((this).val() == 2)
+
+                        //    //{
+
+                        //    //    alert ("2")
+                        //    //}
+
+
+                        //    var $ratingVal = $(this.val());
+                        //alert($(this).text() + " : " + ratingVal)
+
+
+                            //var ratingID = document.getElementById('rating').value;
+                            //var s = document.getElementsByTagName("option").value;
+                            // var s = document.getElementsById('userRatingColour').selectedIndex;
+                            //var s = document.getElementsById('userRatingColour').value;
+
+                            // var e = document.getElementById("userRatingColour");
+                            // var s = e.options[e.selectedIndex].value;
+
+
+                            // for (var i = 0; i < s.length; i++)
+                            //{
+                            //if (i == 0 || i==1 && ratingID == '6')
+
+                            //alert(option);
+
+
+                            //  }
+                            //alert(s);
+
+
+                            //var s = document.getElementById('userRatingColour'), selected, i;
+
+                            //for (i = 0; i < s.length; i++)
+                            //{
+                            //    selected = s[i];
+                            //    if (selected.selected)
+                            //    {
+
+                            //        alert(selected.value);
+                            //    }
+
+
+
+                            //}
+                            // function changeColour() {
+                            //  $("userRatingColour").each(function () {
+
+                            // var s = $(this).val();
+                            //$("#userRatingColour option).text();
+                            //   alert($(this).text() + " : " + $(this).val());
+                            //  });
+                            // $("userRatingColour").find('option.selected').each(function () {
+                            // $(document).on("click", "userRatingColour", function () {
+                            //   alert("my life")
+                            // });
+                            //var y = document.getElementById('ratingID').value;
+                            //  var s = document.getElementById('userRatingColour').value;
+                            //var index = x.selectedIndex;
+                            //// var ratingValue = document.getElementById('rating').value;
+
+                            //  var option = ("userRatingColour").find('option.selected');
+
+
+                            ////  alert("selected option" + option)
+
+
+                            //$("userRatingColour").each(function () {
+
+                            //    //if (parseInt($(this).val()) != 0) {
+                            //    this.get
+                            //  alert(s);
+                            //}
+
+
+                        // if (s =='0' || s == '1' || s == '5' && ratingValue == '6')
+                        //{
+
+                        // //selected.style.color = 'green';
+                        //     document.getElementById('userRatingColour').style.color = 'blue'
+
+                        // }
+                        // else if (s == '4'  && ratingValue == '6')
+                        // {
+
+                        //     document.getElementById('userRatingColour').selectedIndex.style.color = "green";
+                        // }
+
 
                         //var selected = $("#userRatingColour").val();
-                        alert(x);
+
                         //var x = '';
-                        //var y = document.getElementById('rating').value;
+
                         //$("userRatingColour").find('option.selected').each(function () 
                         //$("option").each(function () {
                         //    //(this).val().style.color = "blue"
-                          
-                        //});
-                       // $("userRatingColour").each(function () {
-
-                            //    if (parseInt($(this).val()) != 0) {
-
-                            //    x = $(this).val();
-                            //}
-
-                            //  if (x == 0 || x == 1 || x == 5 && y == '6') {
-                            //document.getElementById('userRatingColour').style.color = 'green'
-                            //document.getElementsById('userRatingColour').style.color = 'green'
-                            //}
-                            //else
-                            // {
-                            //} 
 
                         //});
-                                //    document.getElementById('userRatingColour').style.color = 'blue'
+                        // $("userRatingColour").each(function () {
 
-                              //  }
-                           //
+                        //    if (parseInt($(this).val()) != 0) {
 
-                       }
+                        //    x = $(this).val();
+                        //}
+
+                        //   {
+                        //document.getElementById('userRatingColour').style.color = 'green'
+                        //document.getElementsById('userRatingColour').style.color = 'green'
+                        //}
+                        //else
+                        // {
+                        //} 
+
+                       });
+                        //    document.getElementById('userRatingColour').style.color = 'blue'
+
+                        //  }
+                        ///
+
+
                     //});
-
+                            }
                 </script>
 
 
             }
 
-
-
-
-
         }
-        
-
- 
-
-
-
-
         <input type="submit" class="btn btn-default" value="Submit">      
         </div>
-                
+             
+        </body>
  }
